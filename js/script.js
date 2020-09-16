@@ -118,32 +118,41 @@ for (var i = 0;  i < 6; i++) {
 //===================================================================================================================================//
 // Script SlideShow
 //===================================================================================================================================//
-// var slideIndex = 1;
-// showSlides(slideIndex);
 
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
+var carousel = document.querySelector('.carousel');
+var cellCount = 12;
+var selectedIndex = 0;
 
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
+function rotateCarousel() {
+  var angle = selectedIndex / cellCount * -360;
+  carousel.style.transform = 'translateZ(-571px) rotateY(' + angle + 'deg)';
+}
 
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   var dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//       dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-// }
+var prevButton = document.querySelector('.round-previous');
+prevButton.addEventListener( 'click', function() {
+  selectedIndex--;
+  rotateCarousel();
+});
 
+var nextButton = document.querySelector('.round-next');
+nextButton.addEventListener( 'click', function() {
+  selectedIndex++;
+  rotateCarousel();
+});
+
+//===================================================================================================================================//
+// Script LightBox (jQuery)
+//===================================================================================================================================//
+$(document).ready(function () {
+    
+  $(".little").click(function () {
+      var srcImg = $(this).attr('src');
+      $(".big").html("<img src='" + srcImg + "'>");
+      $(".big").fadeIn("slow").css("display", "flex");
+  });
+
+  $(".big").click(function () {
+      $(".big").fadeOut("fast");
+  });
+
+});

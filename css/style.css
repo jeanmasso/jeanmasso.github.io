@@ -1,11 +1,11 @@
 .body {
-    background-color: #8e8eb8;
-    box-sizing: border-box;
-    font-family: 'Righteous', cursive;
+  background-color: #F5CB5C;
+  box-sizing: border-box;
+  font-family: 'Righteous', cursive;
 }
 
 .navbar {
-  background-color: #363b50;
+  background-color: #242423;
 }
 
 .clock {
@@ -23,28 +23,47 @@
 
 .title {
   position: absolute;
-  bottom: 4%;
-  left: 4%;
   transition: transform .2s;
   color: white;
-  text-shadow: 0 2px 1px #747474;
-  text-transform: uppercase;
-  font-size: 5vw;
+  text-shadow: 0 2px 1px #242423;
+  font-size: 40px;
   font-family: 'Righteous', cursive;
 }
 
-h1:hover {
-  transform: scale(1.2);
+.title:hover {
+  transform: scale(1.1);
+}
+
+.name {
+  top: 10%;
+  left: 2%;
+}
+
+.pro {
+  bottom: 0;
+  right: 2%;
+  text-align: right;
+}
+
+.logo {
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  width: 20%;
+}
+
+.logo img {
+  width: 100%;
 }
 
 /* remove canvas default margin */
-canvas{
-  vertical-align:bottom;
+canvas {
+  vertical-align: bottom;
 }
 
-#particles{
-  width:100%;
-  height:100%;
+#particles {
+  width: 100%;
+  height: 100%;
 }
 
 /* =======================================================================================================*/
@@ -54,12 +73,6 @@ canvas{
 .experiences {
   /* background-color: #8f93c9; */
   margin-bottom: 5%;
-}
-
-.card-body {
-  overflow: auto;
-  height: 876px;
-  background-color: #fdcb9e;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -74,7 +87,7 @@ canvas{
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #00b7c2;
+  background-color: #CFDBD5;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -96,8 +109,8 @@ canvas{
   width: 25px;
   height: 25px;
   right: -13px;
-  background-color: white;
-  border: 4px solid #0f4c75;
+  background-color: #fff;
+  border: 4px solid #242423;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -124,7 +137,7 @@ canvas{
   right: 30px;
   border: medium solid white;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent #333533;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -138,7 +151,7 @@ canvas{
   left: 30px;
   border: medium solid white;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent #333533 transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -149,47 +162,63 @@ canvas{
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: white;
+  background-color: #333533;
   position: relative;
   border-radius: 6px;
+  color: white;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
+
   /* Place the timelime to the left */
   .timeline::after {
-  left: 31px;
+    left: 31px;
   }
-  
+
   /* Full-width containers */
   .box {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
   }
-  
+
   /* Make sure that all arrows are pointing leftwards */
   .box::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-  left: 15px;
+  .left::after,
+  .right::after {
+    left: 15px;
   }
-  
+
   /* Make all right containers behave like the left ones */
   .right {
-  left: 0%;
+    left: 0%;
   }
 }
 
 /* =======================================================================================================*/
 /*Progress bar container*/
 /* =======================================================================================================*/
+
+.card {
+  background-color: #CFDBD5;
+  color: black;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.card-header {
+  background-color: #333533;
+  border-bottom-color: white;
+  color: white;
+}
 
 .progressbar_content {
   overflow: auto;
@@ -198,42 +227,43 @@ canvas{
 }
 
 .progress {
-	background-color: #d8d8d8;
-	border-radius: 20px;
-	position: relative;
-	margin: 15px 0;
-	height: 30px;
-	width: 300px;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px 0;
+  height: 30px;
+  width: 300px;
 }
 
 .bar {
-	background: linear-gradient(to left, #F2709C, #FF9472);
-	box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
-	border-radius: 20px;
-	color: #fff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	width: 0;
-	opacity: 0;
-	transition: 1s ease 0.3s;
+  background: linear-gradient(to left, #cf7500, #f0a500);
+  box-shadow: 0 3px 3px -5px #cf7500, 0 2px 5px #cf7500;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
 }
 
-.text-right .progress{
+.text-right .progress {
   margin-left: 43%;
+  margin-left: 38%;
 }
 
 /* =======================================================================================================*/
 /* Logo row */
 /* =======================================================================================================*/
 
-.img_content{
+.img_content {
   width: 75%;
 }
 
 
-.img_content img{
+.img_content img {
   width: 100%;
 }
 
@@ -242,118 +272,215 @@ canvas{
 /* Slideshow container */
 /* =======================================================================================================*/
 
-.slideshow-container {
-  max-width: 1000px;
+.container-slideshow {
+  height: 450px;
+  margin: 70px 0;
+}
+
+.scene {
+  margin: 40px auto;
+  width: 306px;
   position: relative;
-  margin: auto;
+  perspective: 2000px;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+.carousel {
   width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+  height: 100%;
   position: absolute;
-  top: 0;
+  transform: translateZ(-571px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.img-gallery {
+  width: 100%;
+  height: auto;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.gallery {
+  width: 226px;
+  left: 40px;
+  top: 40px;
+  line-height: 116px;
+  border: 2px solid #242423;
+  position: absolute;
+  background-color: #E8EDDF;
+}
+
+.desc-gallery {
+  padding: 2%;
+  text-align: center;
+  background-color: #333533;
+  color: white;
+}
+
+.desc-gallery img {
+  width: 15%;
+}
+
+.previous,
+.next {
+  text-align: center;
+  border-radius: 20px solid grey;
+}
+
+.gallery:nth-child(1) {transform: rotateY(0deg) translateZ(571px);}
+.gallery:nth-child(2) {transform: rotateY(30deg) translateZ(571px);}
+.gallery:nth-child(3) {transform: rotateY(60deg) translateZ(571px);}
+.gallery:nth-child(4) {transform: rotateY(90deg) translateZ(571px);}
+.gallery:nth-child(5) {transform: rotateY(120deg) translateZ(571px);}
+.gallery:nth-child(6) {transform: rotateY(150deg) translateZ(571px);}
+.gallery:nth-child(7) {transform: rotateY(180deg) translateZ(571px);}
+.gallery:nth-child(8) {transform: rotateY(210deg) translateZ(571px);}
+.gallery:nth-child(9) {transform: rotateY(240deg) translateZ(571px);}
+.gallery:nth-child(10) {transform: rotateY(270deg) translateZ(571px);}
+.gallery:nth-child(11) {transform: rotateY(300deg) translateZ(571px);}
+.gallery:nth-child(12) {transform: rotateY(330deg) translateZ(571px);}
+
+.center-con-previous {
+  position: absolute;
+  left: -500px;
+  top: 185px;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-con-next {
+  position: absolute;
+  right: -450px;
+  top: 185px;
+  align-items: center;
+  justify-content: center;
+}
+
+.round-previous {
+  position: absolute;
+  border: 2px solid #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+
+}
+
+.round-next {
+  position: absolute;
+  border: 2px solid #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+
+}
+
+.arrow.primera.previous {
+  left: 40%;
+}
+
+.arrow.primera.next {
+  left: 50%;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 0;
+  margin-left: 0px;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  top: 12px;
+}
+
+.segunda.previous {
+  margin-left: 8px;
+}
+
+.segunda.next {
+  margin-left: 12px;
+}
+
+.previous {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDMwNiAzMDYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGcgaWQ9ImNoZXZyb24tbGVmdCI+CgkJPHBvbHlnb24gcG9pbnRzPSIyNDcuMzUsMzUuNyAyMTEuNjUsMCA1OC42NSwxNTMgMjExLjY1LDMwNiAyNDcuMzUsMjcwLjMgMTMwLjA1LDE1MyAgICIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wb2x5Z29uPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=);
+}
+
+.next {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+
+.round-previous:hover {
+  background-color: #333533;
+  border: 2px solid black;
+}
+
+.round-next:hover {
+  background-color: #333533;
+  border: 2px solid black;
 }
 
 /* =======================================================================================================*/
 /* Mosaic container */
 /* =======================================================================================================*/
 
-.content_mosaic{
+.content_mosaic {
+  margin: 20px;
+  background-color: #333533;
+  border: 0.7rem solid #333533;
   display: grid;
   grid-template-columns: repeat(10, 0.1fr);
-  grid-gap: 1rem;
+  grid-gap: 0.7rem;
 }
 
-.tile img{
+.tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.tile:nth-child(1), 
-.tile:nth-child(2){
+.tile:nth-child(1),
+.tile:nth-child(2) {
   grid-column: span 4;
   grid-row: span 2;
 }
 
 .tile:nth-child(3),
-.tile:nth-child(4){
+.tile:nth-child(4) {
   grid-column: span 2;
 }
 
-.tile:nth-child(5){
-  grid-column: span 3;
-}
-
 .tile:nth-child(6),
-.tile:nth-child(7){
+.tile:nth-child(7) {
   grid-column: span 3;
 }
 
-.tile:nth-child(8){
-  grid-row: span 1;
+
+.tile:nth-child(5),
+.tile:nth-child(8) {
+  grid-column: span 2;
+}
+
+/* =======================================================================================================*/
+/* Lightbox container */
+/* =======================================================================================================*/
+
+.little, .big {
+  cursor: pointer
+}
+
+.big {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.big img {
+  width: 60%;
+  border: 4px white solid;
+  border-radius: 5px;
 }
 
 /* =======================================================================================================*/
@@ -361,14 +488,109 @@ canvas{
 /* =======================================================================================================*/
 
 .page-footer {
-  background-color: #3f3f44;
+  background-color: #333533;
   color: white;
 }
 
+.page-footer .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .col-4 h4 {
-  padding-top: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .col-4 dl {
   padding-left: 5%;
+}
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+
+/* footer social icons */
+
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+
+.social-network a.icoFacebook:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+
+.social-network a.socialIcon:hover,
+.socialHoverClass {
+  color: #44BCDD;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 15%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #595959;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.social-network a {
+  background-color: #F9F9F9;
+}
+
+.myForm button {
+  display: block;
+}
+
+.footer-copyright {
+  margin-top: 2%;
+  background-color: #E5E5E5;
+  color: #242423;
+  opacity: 0.3;
 }
