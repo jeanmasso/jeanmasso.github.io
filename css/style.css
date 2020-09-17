@@ -168,41 +168,6 @@ canvas {
   color: white;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-
-  /* Place the timelime to the left */
-  .timeline::after {
-    left: 31px;
-  }
-
-  /* Full-width containers */
-  .box {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-  /* Make sure that all arrows are pointing leftwards */
-  .box::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-  /* Make sure all circles are at the same spot */
-  .left::after,
-  .right::after {
-    left: 15px;
-  }
-
-  /* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
-}
-
 /* =======================================================================================================*/
 /*Progress bar container*/
 /* =======================================================================================================*/
@@ -250,7 +215,6 @@ canvas {
 }
 
 .text-right .progress {
-  margin-left: 43%;
   margin-left: 38%;
 }
 
@@ -497,13 +461,12 @@ canvas {
   padding-right: 0;
 }
 
-.col-4 h4 {
-  margin-top: 5%;
-  margin-bottom: 5%;
+.page-footer h4 {
+  margin-top: 15px;
 }
 
-.col-4 dl {
-  padding-left: 5%;
+.page-footer dd {
+  padding-left: 12px;
 }
 
 ul.social-network {

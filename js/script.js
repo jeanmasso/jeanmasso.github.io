@@ -125,7 +125,12 @@ var selectedIndex = 0;
 
 function rotateCarousel() {
   var angle = selectedIndex / cellCount * -360;
-  carousel.style.transform = 'translateZ(-571px) rotateY(' + angle + 'deg)';
+  var littleMedia = window.matchMedia("(max-width: 992px)");
+  if (littleMedia.matches) {
+    carousel.style.transform = 'translateZ(-288px) rotateY(' + angle +'deg)';
+  } else {
+    carousel.style.transform = 'translateZ(-571px) rotateY(' + angle + 'deg)';
+  }
 }
 
 var prevButton = document.querySelector('.round-previous');
