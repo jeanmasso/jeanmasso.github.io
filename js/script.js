@@ -125,9 +125,12 @@ var selectedIndex = 0;
 
 function rotateCarousel() {
   var angle = selectedIndex / cellCount * -360;
-  var littleMedia = window.matchMedia("(max-width: 992px)");
-  if (littleMedia.matches) {
+  var tabMedia = window.matchMedia("(max-width: 992px)");
+  var mobMedia = window.matchMedia("(max-width: 992px)");
+  if (tabMedia.matches) {
     carousel.style.transform = 'translateZ(-288px) rotateY(' + angle +'deg)';
+  } else if (mobMedia.matches) {
+    carousel.style.transform = 'translateZ(-130px) rotateY(' + angle +'deg)';
   } else {
     carousel.style.transform = 'translateZ(-571px) rotateY(' + angle + 'deg)';
   }
