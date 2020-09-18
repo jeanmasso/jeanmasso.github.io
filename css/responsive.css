@@ -181,25 +181,25 @@
 
 @media screen and (max-width: 425px) {
 
-  .navbar a {
-    font-size: 90%;
+  .navbar a, ul, .clock {
+    font-size: 10px;
   }
 
   .title {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .name {
-    top: 10%;
+    top: 9%;
   }
 
   .logo {
-    width: 15%;
-    top: 25%;
+    width: 12%;
+    top: 20%;
   }
 
   .pro {
-    bottom: 45%;
+    bottom: 60%;
   }
 
   .content {
@@ -244,12 +244,14 @@
   }
 
   .carousel {
-    transform: translateZ(-130px);
-    left: 92px;
+    transform: translateZ(-140px);
+    width: 65px;
   }
 
   .scene {
-    margin: 5px;
+    width: 216px;
+    margin-left: 100px;
+    margin: 0px auto;
   }
 
   .gallery {
@@ -258,31 +260,31 @@
   }
 
   .desc-gallery img {
-    width: 12%;
+    width: 8%;
   }
 
   .center-con-previous {
-    top: 150px;
-    left: 80px;
+    top: 145px;
+    left: 35px;
   }
 
   .center-con-next {
-    top: 150px;
-    right: 100px;
+    top: 145px;
+    right: 62px;
   }
 
-  .gallery:nth-child(1) {transform: rotateY(0deg) translateZ(130px);}
-  .gallery:nth-child(2) {transform: rotateY(30deg) translateZ(130px);}
-  .gallery:nth-child(3) {transform: rotateY(60deg) translateZ(130px);}
-  .gallery:nth-child(4) {transform: rotateY(90deg) translateZ(130px);}
-  .gallery:nth-child(5) {transform: rotateY(120deg) translateZ(130px);}
-  .gallery:nth-child(6) {transform: rotateY(150deg) translateZ(130px);}
-  .gallery:nth-child(7) {transform: rotateY(180deg) translateZ(130px);}
-  .gallery:nth-child(8) {transform: rotateY(210deg) translateZ(130px);}
-  .gallery:nth-child(9) {transform: rotateY(240deg) translateZ(130px);}
-  .gallery:nth-child(10) {transform: rotateY(270deg) translateZ(130px);}
-  .gallery:nth-child(11) {transform: rotateY(300deg) translateZ(130px);}
-  .gallery:nth-child(12) {transform: rotateY(330deg) translateZ(130px);}
+  .gallery:nth-child(1) {transform: rotateY(0deg) translateZ(140px);}
+  .gallery:nth-child(2) {transform: rotateY(30deg) translateZ(140px);}
+  .gallery:nth-child(3) {transform: rotateY(60deg) translateZ(140px);}
+  .gallery:nth-child(4) {transform: rotateY(90deg) translateZ(140px);}
+  .gallery:nth-child(5) {transform: rotateY(120deg) translateZ(140px);}
+  .gallery:nth-child(6) {transform: rotateY(150deg) translateZ(140px);}
+  .gallery:nth-child(7) {transform: rotateY(180deg) translateZ(140px);}
+  .gallery:nth-child(8) {transform: rotateY(210deg) translateZ(140px);}
+  .gallery:nth-child(9) {transform: rotateY(240deg) translateZ(140px);}
+  .gallery:nth-child(10) {transform: rotateY(270deg) translateZ(140px);}
+  .gallery:nth-child(11) {transform: rotateY(300deg) translateZ(140px);}
+  .gallery:nth-child(12) {transform: rotateY(330deg) translateZ(140px);}
 
   .round-previous {
     width: 32px;
@@ -318,6 +320,117 @@
 
   .page-footer {
     font-size: 12px;
+  }
+
+  .page-footer h4 {
+    text-align: center;
+  }
+
+  .page-footer dl {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    opacity: 0.5;
+    margin-bottom: 0;
+    padding: 4px 10px;
+  }
+
+  .page-footer .social-network {
+    width: 60%;
+    margin-left: 35% !important;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .navbar a, ul, .clock {
+    font-size: 9px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .name {
+    top: 10%;
+  }
+
+  .logo {
+    width: 12%;
+    top: 20%;
+  }
+
+  .pro {
+    bottom: 60%;
+  }
+
+  .content {
+    padding: 12px 15px;
+  }
+
+  .content h2 {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .content h3, h5 {
+    font-size: 12px;
+    margin-bottom: 2%;
+  }
+
+  .content ul {
+    padding-left: 8px;
+    list-style: none;
+    font-size: 10px;
+  }
+
+  .card h3, h4 {
+    margin-bottom: 0;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .navbar a, ul, .clock {
+    font-size: 9px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  .name {
+    top: 9%;
+  }
+
+  .pro {
+    bottom: 63%;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+
+  .navbar a, ul, .clock {
+    font-size: 7px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  .name {
+    top: 9%;
+  }
+
+  .logo {
+    width: 10%;
+    top: 18%;
+  }
+
+  .pro {
+    bottom: 69%;
   }
 
 }
